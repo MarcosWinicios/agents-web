@@ -1,6 +1,8 @@
 /** biome-ignore-all lint/suspicious/noConsole: <explanation> */
+
+import { ArrowLeft, CircleStop, Mic } from 'lucide-react';
 import { useRef, useState } from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const isRecordingSupported =
@@ -13,6 +15,7 @@ type RoomParams = {
 };
 
 export function RecordRoomAudio() {
+  const navigate = useNavigate();
   const params = useParams<RoomParams>();
   const [isRecording, setIsRecording] = useState(false);
   const recorder = useRef<MediaRecorder | null>(null);
@@ -94,18 +97,35 @@ export function RecordRoomAudio() {
     }, 5000);
   }
 
+  function handleNavigateBack() {
+    navigate(`/room/${params.roomId}`);
+  }
+
   if (!params.roomId) {
     return <Navigate replace to="/" />;
   }
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-3">
       {isRecording ? (
-        <Button onClick={stopRecording}>Pausar gravação</Button>
+        <Button onClick={stopRecording}>
+          <CircleStop />
+          Parar gravação
+        </Button>
       ) : (
-        <Button onClick={startRecording}>Gravar áudio</Button>
+        <Button onClick={startRecording}>
+          <Mic />
+          Gravar áudio
+        </Button>
       )}
 
       {isRecording ? <p>Gravando...</p> : <p>Pausado</p>}
+
+      <br />
+      <br />
+      <Button disabled={isRecording} onClick={handleNavigateBack}>
+        <ArrowLeft />
+        Voltar
+      </Button>
     </div>
   );
 }
