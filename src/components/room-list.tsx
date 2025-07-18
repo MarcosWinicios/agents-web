@@ -30,6 +30,7 @@ export function RoomList() {
             <Link
               className="runded-lg flex items-center justify-between border p-3 hover:bg-accent/50"
               key={room.id}
+              state={{ roomName: room.name }}
               to={`/room/${room.id}`}
             >
               <div className="flex flex-1 flex-col gap-1">

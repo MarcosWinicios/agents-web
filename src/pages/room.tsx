@@ -1,5 +1,5 @@
 import { ArrowLeft, Radio } from 'lucide-react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useLocation, useParams } from 'react-router-dom';
 import { QuestionForm } from '@/components/question-form';
 import { QuestionList } from '@/components/question-list';
 import { Button } from '@/components/ui/button';
@@ -9,6 +9,8 @@ type RoomParams = {
 };
 
 export function Room() {
+  const location = useLocation();
+  const { roomName } = location.state || {};
   const params = useParams<RoomParams>();
 
   if (!params.roomId) {
@@ -34,8 +36,9 @@ export function Room() {
             </Link>
           </div>
           <h1 className="mb-2 font-bold text-3xl text-foreground">
-            Sala de Perguntas
+            {roomName}
           </h1>
+          <span>Sala de Perguntas</span>
           <p className="text-muted-foreground">
             Faça perguntas e receba respostas com IA
           </p>
