@@ -50,6 +50,16 @@ O projeto server(backend) pode ser encontrado **[aqui](https://github.com/Marcos
 - `npm run build` - Gera build de produção
 - `npm run preview` - Preview do build de produção
 
+### Telas
+
+- Página inicial
+  <img src="./docs/home.png" widht="1080" >
+- Detalhes de uma sala
+  <img src="./docs/generating-answer.png" widht="1080" >
+  <img src="./docs/room.png" widht="1080" >
+- Gravar áudio
+  <img src="./docs/record-audio.png" widht="1080" >
+
 ### Backend
 
 O projeto consome uma API que deve estar rodando na porta 3333. Certifique-se de que o backend esteja configurado e executando antes de iniciar o frontend. O projeto backend está disponível **[aqui](https://github.com/MarcosWinicios/agents-server)**.
