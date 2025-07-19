@@ -1,29 +1,26 @@
-# Agents
+# Agents Web
 
-Projeto desenvolvido durante um evento da Rocketseat para demonstrar o uso de agentes inteligentes na web.
+O **Agents Web** permite criar salas para gravação de áudios e realizar perguntas que são respondidas por IA com base no conteúdo gravado.
 
-## 🚀 Tecnologias
+O projeto server(backend) pode ser encontrado **[aqui](https://github.com/MarcosWinicios/agents-server)**.
 
-- **React 19.1** - Biblioteca para interfaces de usuário
-- **TypeScript 5.8** - Superset JavaScript com tipagem estática
-- **Vite 7.0** - Build tool e servidor de desenvolvimento
-- **TailwindCSS 4.1** - Framework CSS utility-first
-- **React Router Dom 7.6** - Biblioteca de roteamento
-- **TanStack React Query 5.8** - Gerenciamento de estado servidor e cache
-- **Radix UI** - Componentes primitivos acessíveis
-- **Shadcn/ui** - Sistema de componentes
-- **Lucide React** - Biblioteca de ícones
+## Tecnologias
 
-## 📂 Padrões de Projeto
+## Tecnologias e Bibliotecas Utilizadas
 
-- **Component-based Architecture** - Arquitetura baseada em componentes React
-- **File-based Routing** - Roteamento baseado em arquivos com React Router
-- **Server State Management** - Gerenciamento de estado servidor com React Query
-- **Variant-based Components** - Componentes com variantes usando CVA
-- **Composition Pattern** - Padrão de composição com Radix Slot
-- **Path Aliasing** - Alias de caminhos (`@/` aponta para `src/`)
+- **[React](https://react.dev/)** – Construção de interfaces declarativas e reativas.
+- **[React Router](https://reactrouter.com/)** e **React Hook Form** – Gerenciamento de rotas e formulários.
+- **[TanStack Query](https://tanstack.com/query/latest)** – Gerenciamento de dados assíncronos.
+- **[Zod](https://zod.dev/)** – Validação e tipagem de dados.
+- **[Tailwind CSS](https://tailwindcss.com/)** – Estilização utilitária com animações e variantes.
+- **[Vite](https://vitejs.dev/)** – Empacotador rápido para desenvolvimento frontend.
+- **[TypeScript](https://www.typescriptlang.org/)** – Tipagem estática para JavaScript.
+- **[Radix UI](https://www.radix-ui.com/)** – Componentes acessíveis e utilitários de composição.
+- **[Day.js](https://day.js.org/)** – Manipulação de datas de forma leve.
+- **[Lucide](https://lucide.dev/)** – Ícones para aplicações React.
+- **[Biome](https://biomejs.dev/)** – Linter e formatter para manter qualidade do código.
 
-## ⚙️ Configuração do Projeto
+## Configuração do Projeto
 
 ### Pré-requisitos
 
@@ -55,14 +52,8 @@ Projeto desenvolvido durante um evento da Rocketseat para demonstrar o uso de ag
 
 ### Backend
 
-O projeto consome uma API que deve estar rodando na porta 3333. Certifique-se de que o backend esteja configurado e executando antes de iniciar o frontend.
+O projeto consome uma API que deve estar rodando na porta 3333. Certifique-se de que o backend esteja configurado e executando antes de iniciar o frontend. O projeto backend está disponível **[aqui](https://github.com/MarcosWinicios/agents-server)**.
 
-## 🛠️ Estrutura do Projeto
+---
 
-```
-src/
-├── components/ui/    # Componentes de interface
-├── pages/           # Páginas da aplicação
-├── lib/             # Utilitários e configurações
-└── app.tsx          # Componente raiz
-```
+Projeto desenvolvido durante um evento da **Rocketseat**.
